@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.codingmaniacs.ides.plugins.intellij.mob-programming</id>
+    <name>Mob Programming</name>
+    <version>1.0</version>
+    <vendor email="support@codingmaniacs.com" url="http://www.codingmaniacs.com">Coding Maniacs</vendor>
+
+    <description><![CDATA[
+    This plugin is a first attempt to create a tool that we can use on our current development process and
+    reduce the amount of times we have to switch laptops on our pair / mob programming sessions.
+  ]]>
+    </description>
+
+    <change-notes><![CDATA[
+    This initial version contains the base code to have a "usable" plugin.
+  ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+
+    <!-- uncomment to enable plugin in all products -->
+    <depends>com.intellij.modules.lang</depends>
+    <!-- -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <applicationService serviceInterface="com.codingmaniacs.ides.plugins.intellij.mob.services.MobConnectionService"
+                            serviceImplementation="com.codingmaniacs.ides.plugins.intellij.mob.services.impl.MobConnectionServiceImpl"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
